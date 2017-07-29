@@ -32,3 +32,12 @@ passport.use('google', new GoogleStrategy({
   (accessToken, refreshToken, profile, done) => getOrCreateOAuthProfile('google', profile, done))
 );
 
+passport.use('facebook', new FacebookStrategy({
+  clientID: process.env.FACEBOOK_CLIENT_ID,
+  clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+  callbackURL: process.env.FACEBOOK_CALLBACKURL,
+  profileFields: ['id', 'emails', 'name']
+},
+  (accessToken, refreshToken, profile, done) => getOrCreateOAuthProfile('facebook', profile, done))
+);
+
