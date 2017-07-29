@@ -1,0 +1,7 @@
+This is a sample .env file. Copy the contents of this file into a new file called .env
+Any and all secrets, such as API keys will live in this file
+
+
+FACEBOOK_CLIENT_ID=FILL_ME_IN
+FACEBOOK_CLIENT_SECRET=FILL_ME_IN
+FACEBOOK_CALLBACKURL=http://FILL_ME_IN/auth/facebook/callback
