@@ -24,14 +24,6 @@ passport.deserializeUser((id, done) => {
     });
 });
 
-passport.use('google', new GoogleStrategy({
-  clientId: process.env.GOOGLE_CLIENT_ID,
-  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: process.env.GOOGLE_CALLBACKURL
-},
-  (accessToken, refreshToken, profile, done) => getOrCreateOAuthProfile('google', profile, done))
-);
-
 passport.use('facebook', new FacebookStrategy({
   clientID: process.env.FACEBOOK_CLIENT_ID,
   clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
