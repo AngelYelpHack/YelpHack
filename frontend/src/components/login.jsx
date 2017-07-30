@@ -1,13 +1,15 @@
 import React from 'react';
+import description from './description.jsx';
+import facebookButton from './facebookButton.jsx';
 
-class Login extends React.Component {
-  render() {
-    return (
-      <div>
-        Login!
-      </div>
-    );
-  }
+const Login = () => {
+  return (
+    <div>
+      <description />
+      <hr />
+      <facebookButton />
+    </div>
+  );
 }
 
 export default Login;
