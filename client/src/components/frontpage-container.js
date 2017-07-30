@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Frontpage from '../frontpage';
+import Frontpage from './frontpage';
 import { fetchRecommendations } from '../actions/page-actions';
 
 const mapStateToProps = state => ({});
