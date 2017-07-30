@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import store from './store/store';
 import Login from './components/login.jsx';
-//import Frontpage from './frontpage.jsx';
+import Frontpage from './components/frontpage.jsx';
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <BrowserRouter>
         <div>
           <Switch>
-            <Route path="/" component={Login} />>
+            <Route path="/login" component={Login} />
+            <Route path="/" component={Frontpage} />
           </Switch>
         </div>
       </BrowserRouter>
