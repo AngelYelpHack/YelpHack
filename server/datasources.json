@@ -1,0 +1,18 @@
+{
+  "yelpHack": {
+    "host": "ds127173.mlab.com:27173/yelphack",
+    "port": 27173,
+    "url": "mongodb://angel-hacker:4cWTrtMWwN7N@ds127173.mlab.com:27173/yelphack",
+    "database": "yelphack",
+    "password": "ds127173.mlab.com:27173/yelphack",
+    "name": "yelpHack",
+    "user": "angel-hacker",
+    "connector": "mongodb"
+  },
+  "db": {
+    "name": "db",
+    "localStorage": "",
+    "file": "",
+    "connector": "memory"
+  }
+}
