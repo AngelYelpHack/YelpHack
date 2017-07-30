@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Geosuggest from 'react-geosuggest';
 
+import { fetchRecommendations } from '../actions/page-actions';
+
 class Frontpage extends Component {
 	constructor(props) {
 		super(props);
@@ -8,6 +10,10 @@ class Frontpage extends Component {
 
 	speak(data) {
 		console.log(data);
+	}
+
+	componentDidMount() {
+		this.props.fetchRecommendations()
 	}
 
 	render() {
@@ -18,7 +24,7 @@ class Frontpage extends Component {
 				</div>
 
 				<div>
-					<Geosuggest 
+					<Geosuggest
 						placeholder="Where are ya headed?"
 						onSuggestSelect={data => this.speak(data)} />
 				</div>

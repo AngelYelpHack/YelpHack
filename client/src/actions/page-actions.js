@@ -1,14 +1,25 @@
 export const RECEIVE_RECOMMENDATIONS = "RECEIVE_RECOMMENDATIONS";
 
-const receiveRecommendations = location => {
+const receiveRecommendations = data => ({
     type: RECEIVE_RECOMMENDATIONS,
-    location
-};
+    data
+});
 
 // Thunker
 
-const fetchRecommendations = location => fetch => (
-    fetch('api/data')
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "jsonp");
+myHeaders.append()
+
+var myInit = {
+    method: 'GET',
+    headers: myHeaders,
+    mode: 'cors',
+    cache: 'default'
+};
+
+export const fetchRecommendations = location => dispatch => (
+    fetch(`https://api.yelp.com/v3/businesses/search?location=${location}`, myInit)
         .then(res => (res.json()))
-        .then(json => (json));
+        .then(json => (dispatch(json)))
 );
