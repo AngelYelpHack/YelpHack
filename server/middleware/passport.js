@@ -26,7 +26,7 @@ passport.use('facebook', new FacebookStrategy({
   clientID: process.env.FACEBOOK_CLIENT_ID,
   clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
   callbackURL: process.env.FACEBOOK_CALLBACKURL,
-  profileFields: ['id', 'email', 'name', 'user_tagged_places', 'user_location']
+  profileFields: ['id', 'emails', 'name', 'user_tagged_places', 'user_location']
 },
   (accessToken, refreshToken, profile, done) => getOrCreateOAuthProfile('facebook', profile, done))
 );
