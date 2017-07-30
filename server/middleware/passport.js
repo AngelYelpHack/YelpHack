@@ -83,7 +83,7 @@ const getOrCreateOAuthProfile = (type, oauthProfile, done) => {
   .catch(() => {
     done(null, null, {
       'message': 'Signing up requires an email address, \
-        please be sure there is an email address associated with you Facebook account \
+        please be sure there is an email address associated with your Facebook account \
         and grant access when you register.' });
     });
 };

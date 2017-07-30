@@ -10,7 +10,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/index.js",
     "lint": "eslint .",
-    "start": "node .",
     "posttest": "npm run lint && nsp check"
   },
   "author": "just some guys",
