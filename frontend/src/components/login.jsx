@@ -1,13 +1,16 @@
 import React from 'react';
-import description from './description.jsx';
-import facebookButton from './facebookButton.jsx';
+import Description from './description.jsx';
+import FacebookButton from './facebookButton.jsx';
 
 const Login = () => {
   return (
     <div>
-      <description />
+      <div>
+        <p>Hello from Login.jsx</p>
+      </div>
+      <Description />
       <hr />
-      <facebookButton />
+      <FacebookButton />
     </div>
   );
 }
