@@ -1,6 +1,6 @@
 import React from 'react';
 
-const facebookButton = () => {
+const FacebookButton = () => {
   return(
     <div>
       <a style="margin-right:15px" href="/login/facebook"><img src="/assets/fb-logo.png" /></a>
@@ -8,4 +8,4 @@ const facebookButton = () => {
   );
 }
 
-export default facebookButton;
+export default FacebookButton;
