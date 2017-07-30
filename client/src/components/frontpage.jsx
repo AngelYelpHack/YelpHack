@@ -13,7 +13,7 @@ class Frontpage extends Component {
 	}
 
 	componentDidMount() {
-		this.props.fetchRecommendations()
+		this.props.getStuff()
 	}
 
 	render() {
