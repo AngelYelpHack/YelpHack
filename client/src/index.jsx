@@ -5,10 +5,6 @@ import { createStore, applyMiddleware } from 'redux';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
-  NavLink,
-  Redirect,
-  withRouter,
   Switch
 } from 'react-router-dom';
 
@@ -22,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <Router>
         <div>
           <Switch>
-            <Route path="/" component={Login} />
+            <Route exact path="/" component={Login} />
             <Route path="/main" component={Frontpage} />
           </Switch>
         </div>
