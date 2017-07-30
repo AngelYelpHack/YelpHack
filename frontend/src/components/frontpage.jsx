@@ -27,3 +27,5 @@ class Frontpage extends Component {
         )
     }
 }
+
+export default Frontpage;
