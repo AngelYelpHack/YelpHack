@@ -5,16 +5,12 @@ import { createStore, applyMiddleware } from 'redux';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
-  NavLink,
-  Redirect,
-  withRouter,
   Switch
 } from 'react-router-dom';
 
 import store from './store/store';
 import Login from './components/login.jsx';
-import Frontpage from './components/frontpage.jsx';
+import Frontpage from './components/frontpage-container';
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
@@ -22,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <Router>
         <div>
           <Switch>
-            <Route path="/" component={Login} />
+            <Route exact path="/" component={Login} />
             <Route path="/main" component={Frontpage} />
           </Switch>
         </div>
