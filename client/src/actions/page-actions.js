@@ -1,3 +1,5 @@
+import yelp from 'yelp-fusion';
+
 export const RECEIVE_RECOMMENDATIONS = "RECEIVE_RECOMMENDATIONS";
 
 const receiveRecommendations = data => ({
@@ -7,19 +9,15 @@ const receiveRecommendations = data => ({
 
 // Thunker
 
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "jsonp");
-myHeaders.append()
+export const fetchRecommendations = location => dispatch => {
+    // $.ajax({
+    //     url: `api/yelp`,
+    //     dataType: 'jsonp'
+    // })
+    // .then(data => {
+    //     console.log(data);
+    //     dispatch(data)
+    // });
 
-var myInit = {
-    method: 'GET',
-    headers: myHeaders,
-    mode: 'cors',
-    cache: 'default'
+    fetch("yelp").then(res => res.json()).then(data => console.log(data));
 };
-
-export const fetchRecommendations = location => dispatch => (
-    fetch(`https://api.yelp.com/v3/businesses/search?location=${location}`, myInit)
-        .then(res => (res.json()))
-        .then(json => (dispatch(json)))
-);
