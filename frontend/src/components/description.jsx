@@ -1,6 +1,6 @@
 import React from 'react';
 
-const description = () => {
+const Description = () => {
   return (
     <div>
       <p>Hello from the description component! This is where we will have a minimalistic</p>
@@ -10,4 +10,4 @@ const description = () => {
   );
 }
 
-export default description;
+export default Description;
