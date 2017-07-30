@@ -10,7 +10,7 @@ import {
 
 import store from './store/store';
 import Login from './components/login.jsx';
-import Frontpage from './components/frontpage-container.jsx';
+import Frontpage from './components/frontpage-container';
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
